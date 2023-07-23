@@ -6,21 +6,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Full Width Pics - Start Bootstrap Template</title>
+        <title>Alas en el Viento</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'Home/assets/favicon.ico' %}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'Home/css/styles.css' %}" rel="stylesheet" />
     </head>
     <body>
+
         <!-- Responsive navbar-->
         {% include 'Home/navbar.html' %}
         <!-- Header - set the background image for the header in the line below-->
         {% include 'Home/header.html' %}
         <!-- Content section-->
-        {% block CONTENIDO %}
-            
-        {% endblock CONTENIDO %}
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h1>
+                            {% block TITULO %}
+                            {% endblock TITULO %}
+                        </h1>
+                        <p class="lead">
+                            {% block SUBTITULO %}
+                            {% endblock SUBTITULO %}
+                        </p>
+                        <p class="mb-0">
+                            {% block CONTENIDO_STYLE %}
+                            {% endblock CONTENIDO_STYLE %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% block CONTENIDO_sSTYLE %}
+        {% endblock CONTENIDO_sSTYLE %}
+        
 
 
         <!-- Plantilla original {% include 'Home/texto_centrado.html' %} -->
