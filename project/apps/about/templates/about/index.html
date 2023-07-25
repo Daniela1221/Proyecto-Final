@@ -1,9 +1,18 @@
-{% extends 'Home/base.html' %}
+{% extends 'Home/index.html' %}
+{% load static %}
 
 {% block TITULO %}
-    Hola
+    Inspiramos las armonías
 {% endblock TITULO %}
 
 {% block CONTENIDO_STYLE %}
-    Hola con estilo
+    Bienvenido a esta página web de Feng Shui “Alas que Inspiran”, un espacio dedicado a ayudarte a equilibrar y armonizar tu entorno para mejorar tu bienestar y energía vital. Mi nombre es Marcela Collao y soy una apasionada de esta hermosa disciplina la cual me fue transmitida por mis maestros Sylvia Galleguillos y Enzo Cossi, la cual fue adaptada al Hemisferio Sur, para estar en concordancia con la naturaleza, con los ciclos de nuestras estaciones y los movimientos del Sol en este lado del planeta, y de esta forma sintonizar con esa vitalidad y conectarla con nuestros espacios. <br>
+    Estoy comprometida en brindarte conocimientos y consejos prácticos para transformar tu hogar, oficina o cualquier espacio en un lugar que te inspire y nutra a nivel físico, emocional y espiritual. <br>
+    En nuestra travesía por el fascinante mundo del Feng Shui, compartiré contigo esta sabiduría milenaria, ayudándote a desbloquear el flujo de energía positiva (conocida como "Qi") en tu entorno, para así promover la salud, la prosperidad y la armonía en todos los aspectos de tu vida; en definitiva, serás testigo del poder transformador de esta energía vital que fluye a través de todo lo que existe. <br>
+    En esta página web, encontrarás diversos recursos, desde artículos informativos y guías prácticas hasta consejos personalizados para aplicar el Feng Shui en tu hogar, oficina o lugar donde vivas. También estarán disponibles servicios de asesoría profesional, donde podemos trabajar juntos para analizar y mejorar la energía de tu espacio, identificar bloqueos o desequilibrios, y re-crear un ambiente que respalde tus proyectos y sueños. <br>
+    Me encantaría ser parte de tu viaje hacia una vida más equilibrada y armoniosa. Explora esta página web, sumérgete en el mundo del Feng Shui y descubre cómo puedes transformar tu espacio en un oasis de energía positiva. Si tienes alguna pregunta o necesitas ayuda adicional, no dudes en ponerte en contacto conmigo, estoy aquí para apoyarte en tu búsqueda de la armonía y el bienestar.
 {% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+    <center><div><img class="img-fluid" src="{% static 'about/img/about.jpeg' %} " alt="..."/></div></center>
+{% endblock CONTENIDO_sSTYLE %}
