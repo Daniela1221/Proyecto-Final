@@ -10845,6 +10845,13 @@ textarea.form-control-lg {
 
 }
 
+.borde-cuadro {
+  border-top: 50px solid magenta;
+  border-right: 50px solid magenta;
+  border-bottom: 50px solid magenta;
+  border-left: 50px solid magenta;
+}
+
 .una-opacidad {
   filter: grayscale(75%);
 }

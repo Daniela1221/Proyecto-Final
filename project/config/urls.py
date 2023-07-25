@@ -22,8 +22,8 @@ urlpatterns = [
     path('',include("Home.urls")),
     path('aboutus/',include("about.urls")),
     path('servicios/',include("servicios.urls")),
-    path('asesoria-empresa/',include("empresa.urls")),
-    path('asesoria-hogar/',include("hogar.urls")),
-    path('paisajismo/',include("paisajismo.urls")),
-    path('4pilares/',include("pilares.urls"))
+    path('servicios/asesoria-empresa/',include("empresa.urls")),
+    path('servicios/asesoria-hogar/',include("hogar.urls")),
+    path('servicios/paisajismo/',include("paisajismo.urls")),
+    path('servicios/4pilares/',include("pilares.urls"))
 ]
