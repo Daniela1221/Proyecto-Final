@@ -10855,3 +10855,7 @@ textarea.form-control-lg {
 .una-opacidad {
   filter: grayscale(75%);
 }
+
+.texto-magenta {
+  color: magenta;
+}

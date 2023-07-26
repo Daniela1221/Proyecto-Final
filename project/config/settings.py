@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'paisajismo',
     'pilares',
     'servicios',
+    'tienda',
 ]
 
 MIDDLEWARE = [
