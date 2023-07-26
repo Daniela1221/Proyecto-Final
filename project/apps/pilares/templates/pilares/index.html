@@ -1,1 +1,95 @@
-{% extends 'Home/base.html' %}
+{% extends 'Home/index.html' %}
+{% load static %}
+
+{% block TITULO %}
+    4 Pilares
+{% endblock TITULO %}
+
+{% block SUBTITULO %}
+    <div class="text-success">Feng-Shui</div>
+{% endblock SUBTITULO %}
+
+{% block CONTENIDO_STYLE %}
+    Consiste en evaluar un entorno, tanto en su interior como en su exterior, a través de la aplicación de diferentes herramientas y métodos, a los que se suma la habilidad del maestro de Feng Shui de percibir los espacios, con todos los sentidos muy alertas, de forma que el resultado del diagnóstico y los ajustes realizados permitan que la energía del lugar se coordine con el dinamismo de la naturaleza (“Qi”) y se mueva y conduzca en forma armónica y favorable para los habitantes de ese hogar, cuyo resultado se expresará en el cumplimiento de sus aspiraciones o anhelos. A continuación se presentan diferentes modalidades.
+    <center><div class="intro-button mx-auto"><a class="btn btn-success" href="{% url 'servicios:home' %}"> Volver a Servicios</div></a></center>
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div><img class="img-fluid" src="{% static 'hogar/img/modalidad-a.jpeg' %} " alt="..."/></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Modalidad Presencial</h2>
+                        <p class="lead text-success">Opción A</p>
+                        <p>Incluye: <br>
+                            ⦁	Informe escrito del estudio Feng Shui habitación por habitación en un plazo máximo de dos semanas. <br>
+                            ⦁	Recomendaciones en los diferentes espacios o habitaciones respecto de colores, formas, objetos, materiales y mobiliario que son favorables en función de su orientación. <br>
+                            ⦁	Orientaciones auspiciosas para cada uno de los habitantes del hogar, particularmente al dormir o en actividades considerando principalmente Elección las ubicaciones favorables en la vivienda para todos los habitantes del hogar. <br>
+                            ⦁	Compatibilidad de la vivienda con sus habitantes. <br>
+                            ⦁	Detección de los problemas más importantes de la vivienda y cómo minimizarlos o solucionarlos. <br>
+                            ⦁	Asesoría presencial en el hogar por alrededor de 2 horas, donde además de explicar el informe de estudio se pueden resolver consultas y preguntas.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <div><img class="img-fluid" src="{% static 'hogar/img/modalidad-b.jpeg' %}" alt="..."/></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Modalidad Presencial</h2>
+                        <p class="lead text-success">Opción B</p>
+                        <p>Incluye: <br>
+                            ⦁	Visita inicial de 30 minutos para recopilar antecedentes y tomar medidas con el luopan (instrumento específico usado en Feng Shui) de forma de establecer con precisión los puntos cardinales y orientaciones del espacio objeto del estudio. <br>
+                            ⦁	Informe escrito del estudio Feng Shui habitación por habitación en un plazo máximo de dos semanas. <br>
+                            ⦁	Recomendaciones en los diferentes espacios o habitaciones respecto de colores, formas, objetos, materiales y mobiliario que son favorables en función de su orientación. <br>
+                            ⦁	Orientaciones auspiciosas para cada uno de los habitantes del hogar, particularmente al dormir o en actividades considerando principalmente Elección las ubicaciones favorables en la vivienda para todos los habitantes del hogar. <br>
+                            ⦁	Compatibilidad de la vivienda con sus habitantes. <br>
+                            ⦁	Detección de los problemas más importantes de la vivienda y cómo minimizarlos o solucionarlos. <br>
+                            ⦁	Asesoría presencial en el hogar por alrededor de 2 horas, donde además de explicar el informe de estudio se pueden resolver consultas y preguntas. <br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div><img class="img-fluid" src="{% static 'hogar/img/modalidad-c.png' %} " alt="..."/></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Modalidad Remota</h2>
+                        <p class="lead text-success">Opción C</p>
+                        <p>Incluye: <br>
+                            ⦁	Visita inicial de 30 minutos para recopilar antecedentes y tomar medidas con el luopan (instrumento específico usado en Feng Shui) de forma de establecer con precisión los puntos cardinales y orientaciones del espacio objeto del estudio. <br>
+                            ⦁	Informe escrito del estudio Feng Shui habitación por habitación en un plazo máximo de dos semanas. <br>
+                            ⦁	Recomendaciones en los diferentes espacios o habitaciones respecto de colores, formas, objetos, materiales y mobiliario que son favorables en función de su orientación. <br>
+                            ⦁	Orientaciones auspiciosas para cada uno de los habitantes del hogar, particularmente al dormir o en actividades considerando principalmente Elección las ubicaciones favorables en la vivienda para todos los habitantes del hogar. <br>
+                            ⦁	Compatibilidad de la vivienda con sus habitantes. <br>
+                            ⦁	Detección de los problemas más importantes de la vivienda y cómo minimizarlos o solucionarlos. <br>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock CONTENIDO_sSTYLE %}
+
+
+
