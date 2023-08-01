@@ -1,0 +1,17 @@
+{% extends 'Home/index.html' %}
+
+{% block TITULO %}
+    Login
+{% endblock TITULO %}
+{% block CONTENIDO_STYLE %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <center><button type="submit" class="text-bg-success">Iniciar Sesión</button></center>
+    </form>
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+    
+{% endblock CONTENIDO_sSTYLE %}
+
