@@ -25,5 +25,6 @@ urlpatterns = [
     path('servicios/asesoria-empresa/',include("empresa.urls")),
     path('servicios/asesoria-hogar/',include("hogar.urls")),
     path('servicios/paisajismo/',include("paisajismo.urls")),
-    path('servicios/4pilares/',include("pilares.urls"))
+    path('servicios/4pilares/',include("pilares.urls")),
+    path('tienda/',include("tienda.urls")),
 ]
