@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Alas en el Viento</title>
+        <title>Alas que Inspiran</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{% static 'Home/assets/favicon.ico' %}" />
+        <link rel="icon" type="image/x-icon" href="{% static 'Home/assets/colibri.ico' %}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'Home/css/styles.css' %}" rel="stylesheet" />
     </head>
@@ -17,7 +17,10 @@
         <!-- Responsive navbar-->
         {% include 'Home/navbar.html' %}
         <!-- Header - set the background image for the header in the line below-->
-        {% include 'Home/header.html' %}
+        {% block HEADER %}
+            
+        {% endblock HEADER %}
+        
         <!-- Content section-->
         <section class="py-5">
             <div class="container my-5">
