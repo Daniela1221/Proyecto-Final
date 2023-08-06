@@ -11,13 +11,13 @@ class TipoProducto(models.Model):
         verbose_name = "Categoría de Productos"
         verbose_name_plural = "Categorías de Productos"
 
-class NuevoProducto(models.Model):
+class Producto(models.Model):
     nombre = models.CharField(max_length=100,verbose_name="Nombre",unique=True)
     categoria = models.ForeignKey(TipoProducto,on_delete=models.SET_NULL, null=True, blank=True)
     cantidad = models.PositiveIntegerField(verbose_name="Cantidad")
     precio = models.PositiveIntegerField(verbose_name="Precio")
     descripcion = models.TextField(max_length=1000,verbose_name="Descrición")
-    imagen = models.ImageField(verbose_name="Imagen asociada al producto",upload_to="")
+    imagen = models.ImageField(verbose_name="Imagen asociada al producto",upload_to="img_productos",blank=True,null=True)
     fecha_actualizacion = models.DateField(default=timezone.now,editable=False,verbose_name="Fecha de actualización")
 
     def __str__(self) -> str:

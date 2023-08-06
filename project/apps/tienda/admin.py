@@ -3,8 +3,8 @@ from . import models
 
 admin.site.register(models.TipoProducto)
 
-@admin.register(models.NuevoProducto)
-class NuevoProductoAdmin(admin.ModelAdmin):
+@admin.register(models.Producto)
+class ProductoAdmin(admin.ModelAdmin):
     list_display = (
         "nombre",
         "categoria",
