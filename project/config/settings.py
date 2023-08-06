@@ -141,5 +141,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # LOGIN_URL = reverse_lazy("Home:login")
 # LOGIN_REDIRECT_UTL = reverse_lazy("Home:index") #! Podría no usarse
 
-MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
