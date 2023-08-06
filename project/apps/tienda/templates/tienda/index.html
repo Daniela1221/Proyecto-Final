@@ -1,11 +1,15 @@
 {% extends 'Home/index.html' %}
 
 {% block TITULO %}
-    Tienda de Compras
+    ¡Bienvenido a la tienda de Alas que Inspiran!
 {% endblock TITULO %}
 
-{% block CONTENIDO_sSTYLE %}
+{% block CONTENIDO_STYLE %}
+    ¿Qué desea buscar?<br> <br>
+    <div class="text-body"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_list' %}">Todos los productos</a></div>
+    <br>
+    <div class="text-body"><a class="btn btn-outline-success mt-auto" href="#">Productos por categoría</a></div>
+{% endblock CONTENIDO_STYLE %}
 
-    {% include 'tienda/productos.html' %}
-    
+{% block CONTENIDO_sSTYLE %}
 {% endblock CONTENIDO_sSTYLE %}
