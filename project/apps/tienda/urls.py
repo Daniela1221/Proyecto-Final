@@ -1,9 +1,21 @@
 from django.urls import path
-from .views import home
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from . import views
 
 app_name = "tienda"
 
 urlpatterns = [
-    path("", home, name="home"),
-
+    path("", views.home, name="home"),
+#     # path("productos/carro/",,name="productos_carro")
 ]
+
+#PRODUCTOS
+urlpatterns += [
+    path("producto/list/", views.ProductoList.as_view(), name="producto_list"),
+    path("producto/create/",views.ProductoCreate.as_view(),name="producto_create"),
+    path("producto/detail/<int:pk>",views.ProductoDetail.as_view(),name="producto_detail"),
+    path("producto/update/<int:pk>",views.ProductoUpdate.as_view(),name="producto_update"),
+    path("producto/delete/<int:pk>",views.ProductoDelete.as_view(),name="producto_delete")
+]
+
+urlpatterns += staticfiles_urlpatterns()

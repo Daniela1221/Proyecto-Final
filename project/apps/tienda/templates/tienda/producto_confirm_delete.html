@@ -1,0 +1,19 @@
+{% extends 'Home/index.html' %}
+
+{% block TITULO %}
+    Eliminación del Producto 
+{% endblock TITULO %}
+
+{% block CONTENIDO_STYLE %}
+    ¿Confirma la eliminación del producto "{{ object }}"
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+    </form>
+
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+    
+{% endblock CONTENIDO_sSTYLE %}

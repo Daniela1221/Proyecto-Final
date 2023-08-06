@@ -1,0 +1,66 @@
+{% extends 'Home/index.html' %}
+{% load static %}
+
+{% block TITULO %}
+    Tienda de Compras
+{% endblock TITULO %}
+
+{% block CONTENIDO_STYLE %}
+<body>
+    <div class="py-lg-4" class="text-center">
+        <form action="{% url 'tienda:producto_list' %}" method="get">
+            <input type="text" name="consulta" placeholder="Buscar...">
+        </form>
+    </div>
+</body>
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+{% if object_list %}
+    <head>
+        <link href="{% static 'tienda/css/styles3.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    {% for object in object_list %}
+                        <div class="col mb-5">
+                            <div class="card h-100">
+                                <!-- Product image-->
+                                
+                                <img class="card-img-top" src="{{ object.imagen.url }}" width="450" height="450" alt="Imagen" />
+                                
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <h5 class="fw-bolder">{{ object.nombre }}</h5>
+                                        <!-- Product price-->
+                                        <!-- <span class="text-muted text-decoration-line-through">$20.00</span> -->
+                                        ${{ object.precio }}
+                                    </div>
+                                </div>
+                                <!-- Product actions-->
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-info mt-auto" href="{% url 'tienda:producto_detail' object.id %}">Más Información</a></div>
+                                    <br>
+                                    {% if user.is_authenticated %}
+                                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Añadir al Carro</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_update' object.id %}">Actualizar</a></div>
+                                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_delete' object.id %}">Eliminar</a></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+    </body>
+{% else %}
+    <p>No hay productos disponibles.</p>
+{% endif %}
+{% endblock CONTENIDO_sSTYLE %}
+
