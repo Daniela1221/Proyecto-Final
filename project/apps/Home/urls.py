@@ -8,7 +8,9 @@ app_name = "Home"
 urlpatterns = [
     path("", views.home, name="home"),
     path("login/",views.login_request,name="login"),
-    path("logout/",LogoutView.as_view(template_name="Home/logout.html"),name="logout")
+    path("logout/",LogoutView.as_view(template_name="Home/logout.html"),name="logout"),
+    path("register/",views.register, name="register"),
+    path("solicitud/",views.solicitud, name="solicitud")
 ]
 
 urlpatterns += staticfiles_urlpatterns()

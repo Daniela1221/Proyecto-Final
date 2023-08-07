@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.contrib.admin.views.decorators import staff_member_required
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.urls import reverse
 from . import forms
@@ -22,3 +24,26 @@ def login_request(request):
     else:
         form = forms.CustomAuthenticationForm()
     return render(request,"Home/login.html",{"form":form})
+
+@staff_member_required
+def register(request):
+    if request.method == "POST":
+        form = forms.CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data["username"]
+            form.save()
+            return render(request, "Home/index.html", {"mensaje": "Nueva cuenta para cliente creada con éxito."})
+    else:
+        form = forms.CustomUserCreationForm()
+    return render(request, "Home/register.html", {"form": form})
+
+def solicitud(request):
+    if request.method == "POST":
+        form = forms.SuscriptorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            contexto = {"solicitud":"La solicitud de suscripción fue enviada."}
+            return render(request,"Home/index.html",contexto)
+    else:
+        form = forms.SuscriptorForm()
+    return render(request,"Home/solicitud_subscripcion.html",{"form":form})

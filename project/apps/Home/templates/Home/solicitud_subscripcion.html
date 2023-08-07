@@ -1,0 +1,20 @@
+{% extends 'Home/index.html' %}
+
+{% block TITULO %}
+    Solicitud de Suscripción
+{% endblock TITULO %}
+
+{% block CONTENIDO_STYLE %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <center>
+        <button class="text-bg-info" type="submit">Enviar Registro</button>
+        </center>
+    </form>
+
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+    
+{% endblock CONTENIDO_sSTYLE %}
