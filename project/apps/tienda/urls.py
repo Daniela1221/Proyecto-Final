@@ -1,8 +1,6 @@
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
-from django.conf.urls.static import static
-from django.conf import settings
 
 app_name = "tienda"
 
@@ -21,6 +19,3 @@ urlpatterns += [
 ]
 
 urlpatterns += staticfiles_urlpatterns()
-
-if settings.DEBUG:
-    urlpatterns += static(static.MEDIA_URL, document_root=settings.MEDIA_ROOT)

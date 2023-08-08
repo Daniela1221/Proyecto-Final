@@ -18,7 +18,7 @@ class Producto(models.Model):
     precio = models.PositiveIntegerField(verbose_name="Precio")
     descripcion = models.TextField(max_length=1000,verbose_name="Descrición")
     imagen = models.ImageField(verbose_name="Imagen asociada al producto",upload_to="img_productos",blank=True,null=True)
-    fecha_actualizacion = models.DateField(default=timezone.now,editable=False,verbose_name="Fecha de actualización")
+    fecha_actualizacion = models.DateTimeField(default=timezone.now,editable=False,verbose_name="Fecha de actualización")
 
     def __str__(self) -> str:
         return self.nombre
