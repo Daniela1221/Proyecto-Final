@@ -1,0 +1,20 @@
+{% extends 'Home/index.html' %}
+
+{% block TITULO %}
+Registro de usuario
+{% endblock TITULO %}
+
+{% block CONTENIDO_STYLE %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-grid gap-3"> 
+            <button type="submit" class="btn btn-outline-success ">Registrar nuevo usuario</button>
+        </div>
+    </form>
+
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+{% endblock CONTENIDO_sSTYLE %}
