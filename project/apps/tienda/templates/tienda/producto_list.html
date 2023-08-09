@@ -45,13 +45,13 @@
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                     <div class="text-center"><a class="btn btn-outline-info mt-auto" href="{% url 'tienda:producto_detail' object.id %}">Más Información</a></div>
                                     <br>
-                                    {% if user.is_authenticated %}
-                                        
+                                    {% if user.is_staff %}
                                         <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_update' object.id %}">Actualizar</a></div>
                                         <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_delete' object.id %}">Eliminar</a></div>
                                     {% endif %}
-                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:carrito' %}">Añadir al Carro</a></div>
-                                    
+                                    {% if user.is_authenticated %}
+                                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:carrito' %}">Añadir al Carro</a></div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

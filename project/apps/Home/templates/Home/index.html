@@ -9,6 +9,16 @@
 {% block CONTENIDO_STYLE %}
     <center><h2 class="text-bg-success">{{ mensaje }}</h2></center>
     <center><h3 class="text-bg-warning">{{ solicitud }}</h3></center>
+    <center><h3 class="text-bg-success">{{ contacto }}</h3></center>
+
+    {% if user.is_staff %}
+        <center>
+        <a href="{% url 'admin:index' %}" class="btn btn-outline-info ">Panel de Administración</a>
+        <br> <br>
+        <a href="{% url 'Home:register' %}" class="btn btn-outline-info">Registrar un Suscriptor</a>
+        </center>
+    {% endif %}
+
 {% endblock CONTENIDO_STYLE %}
 
 {% block CONTENIDO_sSTYLE %}
