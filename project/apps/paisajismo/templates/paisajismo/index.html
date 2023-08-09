@@ -1,5 +1,9 @@
-{% extends 'Home/index.html' %}
+{% extends 'Home/base.html' %}
 {% load static %}
+
+{% block HEADER %}
+    {% include 'paisajismo/header.html' %}
+{% endblock HEADER %}
 
 {% block TITULO %}
     Paisajismo

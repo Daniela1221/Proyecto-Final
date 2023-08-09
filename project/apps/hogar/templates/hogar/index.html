@@ -1,6 +1,10 @@
 
-{% extends 'Home/index.html' %}
+{% extends 'Home/base.html' %}
 {% load static %}
+
+{% block HEADER %}
+    {% include 'hogar/header.html' %}
+{% endblock HEADER %}
 
 {% block TITULO %}
     Asesoría Hogar
@@ -11,7 +15,12 @@
 {% endblock SUBTITULO %}
 
 {% block CONTENIDO_STYLE %}
-    Consiste en evaluar un entorno, tanto en su interior como en su exterior, a través de la aplicación de diferentes herramientas y métodos, a los que se suma la habilidad del maestro de Feng Shui de percibir los espacios, con todos los sentidos muy alertas, de forma que el resultado del diagnóstico y los ajustes realizados permitan que la energía del lugar se coordine con el dinamismo de la naturaleza (“Qi”) y se mueva y conduzca en forma armónica y favorable para los habitantes de ese hogar, este resultado se expresará en el cumplimiento de sus aspiraciones o anhelos.
+    Consiste en evaluar un entorno, tanto en su interior como en su exterior, a través de la aplicación de 
+    diferentes herramientas y métodos, a los que se suma la habilidad del maestro de Feng Shui de percibir 
+    los espacios, con todos los sentidos muy alertas, de forma que el resultado del diagnóstico y los 
+    ajustes realizados permitan que la energía del lugar se coordine con el dinamismo de la naturaleza 
+    (“Qi”) y se mueva y conduzca en forma armónica y favorable para los habitantes de ese hogar, este 
+    resultado se expresará en el cumplimiento de sus aspiraciones o anhelos.
     <br><br>
     <center><div class="intro-button mx-auto"><a class="btn btn-success" href="{% url 'servicios:home' %}"> Volver a Servicios</div></a></center>
 {% endblock CONTENIDO_STYLE %}

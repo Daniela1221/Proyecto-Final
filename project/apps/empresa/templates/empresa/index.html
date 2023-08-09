@@ -1,5 +1,9 @@
-{% extends 'Home/index.html' %}
+{% extends 'Home/base.html' %}
 {% load static %}
+
+{% block HEADER %}
+    {% include 'empresa/header.html' %}
+{% endblock HEADER %}
 
 {% block TITULO %}
     Asesoría a Empresas

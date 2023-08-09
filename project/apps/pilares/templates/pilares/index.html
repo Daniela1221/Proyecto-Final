@@ -1,5 +1,9 @@
-{% extends 'Home/index.html' %}
+{% extends 'Home/base.html' %}
 {% load static %}
+
+{% block HEADER %}
+    {% include 'pilares/header.html' %}
+{% endblock HEADER %}
 
 {% block TITULO %}
     4 Pilares
