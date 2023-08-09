@@ -10868,6 +10868,10 @@ textarea.form-control-lg {
   color: magenta;
 }
 
+.texto-verde {
+  color: green;
+}
+
 .contenedor {
   display: flex;
   justify-content: center;

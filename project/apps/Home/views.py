@@ -11,13 +11,17 @@ from . import forms
 def home(request):
     return render(request, "Home/index.html")
 
+def perfil(request):
+    return render(request,"Home/perfil.html")
+
 def login_request(request):
     if request.method == "POST":
         form = forms.CustomAuthenticationForm(request,request.POST)
         if form.is_valid():
             usuario = form.cleaned_data.get("username")
+            correo = form.cleaned_data.get("email")
             contraseña = form.cleaned_data.get("password")
-            user = authenticate(username=usuario, password=contraseña)
+            user = authenticate(username=usuario, email=correo, password=contraseña)
             if user is not None:
                 login(request, user)
                 return render(request, "Home/index.html", {"mensaje":"Inicio de sesión exitoso"})

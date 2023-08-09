@@ -4,7 +4,15 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 
+class Avatar(models.Model):
+    imagen = models.ImageField(upload_to="avatares", blank=True, null=True)
 
+    def __str__(self) -> str:
+        return f"Avatar"
+    
+    class Meta:
+        verbose_name = "Avatar"
+        verbose_name_plural = "Avatares"
 
 class Trabajador(models.Model):
     nombre = models.CharField(max_length=50, verbose_name="Nombre")

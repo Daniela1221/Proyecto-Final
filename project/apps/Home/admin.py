@@ -1,6 +1,8 @@
 from django.contrib import admin
 from . import models
 
+admin.site.register(models.Avatar)
+
 @admin.register(models.Trabajador)
 class TrabajadorAdmin(admin.ModelAdmin):
     list_display = (

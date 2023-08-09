@@ -3,14 +3,20 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
 from . import models
 
+class AvatarForm(forms.ModelForm):
+    class Meta:
+        model = models.Avatar
+        fields = ["imagen"]
+
+
 class CustomAuthenticationForm(AuthenticationForm):
     class Meta:
         model = User
-        fields = ["username","password","email"]
+        fields = ["username","email","password"]
         widgets = {
             "username":forms.TextInput(),
+            "email":forms.EmailInput(),
             "password":forms.PasswordInput(),
-            "email":forms.TextInput(),
         }
 
 class CustomUserCreationForm(UserCreationForm):
@@ -21,6 +27,7 @@ class CustomUserCreationForm(UserCreationForm):
         # help_texts = {k: "" for k in fields}
         widgets = {
             "username": forms.TextInput(attrs={"class": "form-control"}),
+            "email": forms.EmailInput(attrs={"class":"form-control"}),
             "password1": forms.PasswordInput(attrs={"class": "form-control"}),
             "password2": forms.PasswordInput(attrs={"class": "form-control"}),
         }

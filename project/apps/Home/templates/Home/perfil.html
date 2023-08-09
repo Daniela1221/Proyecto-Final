@@ -1,0 +1,48 @@
+{% extends 'Home/index.html' %}
+{% load static %}
+
+{% block CONTENIDO_STYLE %}
+    {{ avatar }}
+{% endblock CONTENIDO_STYLE %}
+
+{% block CONTENIDO_sSTYLE %}
+    <!-- <div><img src="" alt=""></div> -->
+    <section>
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    {% if user.avatar.imagen.urls %}
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{{ user.avatar.imagen.url }}" alt="avatar"></li> </div>
+                    {% else %}
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'Home/img/predeterminado.png' %}" alt="avatar"></li> </div>
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4">Bienvenido a su Perfil {{ user.username }}</h2>
+                        <h5 class="texto-verde"><u> Datos de la cuenta </u></h5> 
+                        Usuario: {{ user.username }} <br>
+                        Correo: {{ user.email }} <br>
+                        <br>
+                        <b class="texto-verde"> Tipo de cuenta: </b>
+                        {% if user.is_staff %}
+                            Administrador <br>
+                            Acceso a toda la página web
+                        {% elif user.is_authenticated %}
+                            Suscriptor <br>
+                            <b>Acceso a</b>  <br>
+                            - Tienda para compra de productos <br>
+                            - Servicios para comprar alguna asesoría <br>
+                            - Contacto para aclarar tus dudas con el Administrador
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock CONTENIDO_sSTYLE %}
+

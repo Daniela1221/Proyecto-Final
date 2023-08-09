@@ -11,7 +11,7 @@
                     <li class="nav-item"><a class="nav-link {% if request.path == "/tienda/" %} activate{% endif %}" href="{% url 'tienda:home' %}">Tienda</a></li>
                     <li class="nav-item"><a class="nav-link {% if request.path == "/tienda/" %} activate{% endif %}" href="{% url 'tienda:carrito' %}">Carrito</a></li>
                     <li class="nav-item"><a class="nav-link {% if request.path == "/tienda/" %} activate{% endif %}" href="{% url 'tienda:contacto' %}">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link text-info" href="#!">{{ user.username }}</a></li>
+                    <li class="nav-item"><a class="nav-link text-info" href="{% url 'Home:perfil' %}">{{ user.username }}</a></li>
                     <li class="nav-item"><a class="nav-link text-info" href="{% url 'Home:logout' %}">Logout</a></li>
                 {% else %}
                     <li class="nav-item"><a class="nav-link {% if request.path == "/about/" %} activate{% endif %}" href="{% url 'about:home' %}">Quienes Somos</a></li>
