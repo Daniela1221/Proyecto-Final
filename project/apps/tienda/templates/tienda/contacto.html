@@ -1,0 +1,15 @@
+{% extends 'Home/index.html' %}
+
+{% block TITULO %}
+    Formulario de Contacto
+{% endblock TITULO %}
+
+{% block CONTENIDO_STYLE %}
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-success">Guardar</button>
+    </form>
+
+{% endblock CONTENIDO_STYLE %}
