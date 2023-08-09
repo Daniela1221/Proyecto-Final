@@ -14,4 +14,4 @@ class TipoProductoForm(forms.ModelForm):
 class ContactoForm(forms.ModelForm):
     class Meta:
         model = models.Contacto
-        fields = ["nombre","consulta"]
+        fields = ["correo","consulta"]

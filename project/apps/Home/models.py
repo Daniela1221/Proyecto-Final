@@ -2,10 +2,11 @@ from django.db import models
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.shortcuts import redirect
+from django.contrib.auth.models import User
 
-# Create your models here.
 
-class Suscriptor(models.Model):
+
+class Trabajador(models.Model):
     nombre = models.CharField(max_length=50, verbose_name="Nombre")
     apellido = models.CharField(max_length=50, verbose_name="Apellido")
     edad = models.PositiveIntegerField()
@@ -13,11 +14,12 @@ class Suscriptor(models.Model):
     nombre_usuario = models.CharField(max_length=50, verbose_name="Nombre de usuario")
     contraseña = models.CharField(max_length=50, verbose_name="Ingrese una contraseña")
     contraseña2 = models.CharField(max_length=50, verbose_name="Confirmar contraseña")
+    descripcion = models.TextField(verbose_name="Descripción")
     fecha_solicitud = models.DateTimeField(default=timezone.now,editable=False,verbose_name="Fecha de solicitud")
 
     class Meta:
-        verbose_name = "Suscriptor"
-        verbose_name_plural = "Suscriptores"
+        verbose_name = "Trabajador"
+        verbose_name_plural = "Trabajadores"
         ordering = ("-fecha_solicitud",)
 
     def clean(self):

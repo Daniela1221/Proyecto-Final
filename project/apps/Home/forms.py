@@ -25,8 +25,8 @@ class CustomUserCreationForm(UserCreationForm):
             "password2": forms.PasswordInput(attrs={"class": "form-control"}),
         }
 
-class SuscriptorForm(forms.ModelForm):
+class TrabajadorForm(forms.ModelForm):
     class Meta:
-        model = models.Suscriptor
+        model = models.Trabajador
         fields = ["nombre","apellido","edad","correo",
-                  "nombre_usuario","contraseña","contraseña2"]
+                  "nombre_usuario","contraseña","contraseña2","descripcion"]

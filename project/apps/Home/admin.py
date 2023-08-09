@@ -1,8 +1,8 @@
 from django.contrib import admin
 from . import models
 
-@admin.register(models.Suscriptor)
-class SuscriptorAdmin(admin.ModelAdmin):
+@admin.register(models.Trabajador)
+class TrabajadorAdmin(admin.ModelAdmin):
     list_display = (
         "nombre","apellido","correo",
         "nombre_usuario","fecha_solicitud",

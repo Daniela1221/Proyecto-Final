@@ -20,12 +20,12 @@ class ProductoAdmin(admin.ModelAdmin):
 @admin.register(models.Contacto)
 class ContactoAdmin(admin.ModelAdmin):
     list_display = (
-        "nombre",
+        "correo",
         "consulta",
         "fecha_consulta"
     )
-    list_display_links = ("nombre",)
-    search_fields = ("nombre",)
-    list_filter = ("nombre",)
+    list_display_links = ("correo",)
+    search_fields = ("correo",)
+    list_filter = ("correo",)
     date_hierarchy = "fecha_consulta"
 
