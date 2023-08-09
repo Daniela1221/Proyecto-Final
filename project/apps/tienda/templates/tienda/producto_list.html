@@ -46,10 +46,12 @@
                                     <div class="text-center"><a class="btn btn-outline-info mt-auto" href="{% url 'tienda:producto_detail' object.id %}">Más Información</a></div>
                                     <br>
                                     {% if user.is_authenticated %}
-                                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Añadir al Carro</a></div>
+                                        
                                         <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_update' object.id %}">Actualizar</a></div>
                                         <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:producto_delete' object.id %}">Eliminar</a></div>
                                     {% endif %}
+                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="{% url 'tienda:carrito' %}">Añadir al Carro</a></div>
+                                    
                                 </div>
                             </div>
                         </div>

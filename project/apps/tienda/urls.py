@@ -6,16 +6,16 @@ app_name = "tienda"
 
 urlpatterns = [
     path("", views.home, name="home"),
-#     # path("productos/carro/",,name="productos_carro")
+    path("carrito",views.carrito,name="carrito"),
 ]
 
 #PRODUCTOS
 urlpatterns += [
-    path("producto/list/", views.ProductoList.as_view(), name="producto_list"),
-    path("producto/create/",views.ProductoCreate.as_view(),name="producto_create"),
-    path("producto/detail/<int:pk>",views.ProductoDetail.as_view(),name="producto_detail"),
-    path("producto/update/<int:pk>",views.ProductoUpdate.as_view(),name="producto_update"),
-    path("producto/delete/<int:pk>",views.ProductoDelete.as_view(),name="producto_delete")
+    path("productos/list/", views.ProductoList.as_view(), name="producto_list"),
+    path("productos/create/",views.ProductoCreate.as_view(),name="producto_create"),
+    path("productos/detail/<int:pk>",views.ProductoDetail.as_view(),name="producto_detail"),
+    path("productos/update/<int:pk>",views.ProductoUpdate.as_view(),name="producto_update"),
+    path("productos/delete/<int:pk>",views.ProductoDelete.as_view(),name="producto_delete"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

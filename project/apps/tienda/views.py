@@ -37,4 +37,6 @@ class ProductoDelete(DeleteView):
     model = models.Producto
     success_url = reverse_lazy("tienda:producto_list")
 
-#Tipo de Productos (Categoría de Productos)
+def carrito(request):
+    
+    return render(request,"tienda/carrito.html")
