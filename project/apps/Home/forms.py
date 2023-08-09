@@ -3,11 +3,6 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
 from . import models
 
-class AvatarForm(forms.ModelForm):
-    class Meta:
-        model = models.Avatar
-        fields = ["imagen"]
-
 
 class CustomAuthenticationForm(AuthenticationForm):
     class Meta:
