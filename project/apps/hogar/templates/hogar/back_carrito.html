@@ -1,12 +1,12 @@
 {% if user.is_authenticated %}
     <div class="text-body">
-        <a class="btn btn-outline-success mt-auto" href="tienda:carrito">Agregar al Carro</a>
+        <a class="btn btn-outline-success mt-auto" href="{% url 'tienda:carrito' %}">Agregar al Carro</a>
     </div>
 {% else %}
     <div class="text-body-emphasis  ">
         Si desea contratar este servicio, suscríbase a la página. <br> <br>
         <center>
-        <a class="btn btn-outline-success mt-auto" href="{% url 'Home:solicitud' %}">Formulario Suscripción</a>
+        <a class="btn btn-outline-success mt-auto" href="{% url 'Home:register' %}">Registrarse</a>
         </center>
     </div>
 {% endif %}
