@@ -26,3 +26,11 @@ class Producto(models.Model):
     class Meta:
         verbose_name = "Nuevo Producto"
         verbose_name_plural = "Nuevos Productos"
+
+class Contacto(models.Model):
+    nombre = models.ForeignKey("Home.Suscriptor",on_delete=models.DO_NOTHING, verbose_name="Suscriptor")
+    consulta = models.TextField(max_length=1000)
+    fecha_consulta = models.DateTimeField(default=timezone.now,editable=False,verbose_name="Fecha de consulta")
+
+    def __str__(self) -> str:
+        return f"{self.nombre}"

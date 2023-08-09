@@ -11,3 +11,7 @@ class TipoProductoForm(forms.ModelForm):
         model = models.TipoProducto
         fields = "__all__"
 
+class ContactoForm(forms.ModelForm):
+    class Meta:
+        model = models.Contacto
+        fields = ["nombre","consulta"]

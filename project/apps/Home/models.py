@@ -26,6 +26,9 @@ class Suscriptor(models.Model):
         elif 18>self.edad:
             raise ValidationError("La persona ingresada no es mayor de edad.")
     
+    def __str__(self) -> str:
+        return f"{self.nombre_usuario}: {self.correo}"
+    
 
         
         

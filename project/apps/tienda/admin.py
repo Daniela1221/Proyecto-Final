@@ -16,3 +16,16 @@ class ProductoAdmin(admin.ModelAdmin):
     search_fields = ("nombre","categoria")
     list_filter = ("nombre",)
     date_hierarchy = "fecha_actualizacion"
+
+@admin.register(models.Contacto)
+class ContactoAdmin(admin.ModelAdmin):
+    list_display = (
+        "nombre",
+        "consulta",
+        "fecha_consulta"
+    )
+    list_display_links = ("nombre",)
+    search_fields = ("nombre",)
+    list_filter = ("nombre",)
+    date_hierarchy = "fecha_consulta"
+

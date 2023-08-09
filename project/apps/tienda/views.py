@@ -8,6 +8,20 @@ from . import models, forms
 def home(request):
     return render(request,"tienda/index.html")
 
+def carrito(request):
+    return render(request,"tienda/carrito.html")
+
+def contacto(request):
+    if request.method == "POST":
+        form = forms.ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            contexto = {"contacto":"Consulta enviada con éxito al administrador. Te responderemos mediante correo lo antes posible."}
+            render(request, "Home/index.html", contexto)
+    else:
+        form = forms.ContactoForm()
+    return render(request, "tienda/contacto.html", {"form": form})
+
 #Productos
 class ProductoList(ListView):
     model = models.Producto
@@ -36,7 +50,3 @@ class ProductoUpdate(UpdateView):
 class ProductoDelete(DeleteView):
     model = models.Producto
     success_url = reverse_lazy("tienda:producto_list")
-
-def carrito(request):
-    
-    return render(request,"tienda/carrito.html")
