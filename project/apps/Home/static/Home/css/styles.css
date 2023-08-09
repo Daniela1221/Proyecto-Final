@@ -10868,3 +10868,12 @@ textarea.form-control-lg {
 .texto-magenta {
   color: magenta;
 }
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen {
+  width: 120px;
+}
