@@ -10830,8 +10830,8 @@ textarea.form-control-lg {
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  background-image: url("../img/portada.jpg");
-  /* background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada.jpg"); */
+  /* background-image: url("../img/portada.jpg"); */
+  background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada.jpg");
 }
 
 .bg-image-full-2 {
@@ -10839,7 +10839,6 @@ textarea.form-control-lg {
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  /* background-image: url("../img/portada-servicios.png"); */
   background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada-servicios.png");
 }
 
@@ -10876,4 +10875,36 @@ textarea.form-control-lg {
 
 .imagen {
   width: 120px;
+}
+
+.bg-image-full-3 {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada-asesoria-empresa.jpg");
+}
+
+.bg-image-full-4 {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada-4pilares.jpg");
+}
+
+.bg-image-full-5 {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada-asesoria-hogar.jpg");
+}
+
+.bg-image-full-6 {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(47, 50, 15, 0.65), rgba(47, 50, 15, 0.65)), url("../img/portada-paisajismo.png");
 }
