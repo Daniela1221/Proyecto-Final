@@ -45,7 +45,7 @@ def solicitud(request):
         form = forms.TrabajadorForm(request.POST)
         if form.is_valid():
             form.save()
-            contexto = {"solicitud":"La solicitud de suscripción fue enviada."}
+            contexto = {"solicitud":"La solicitud de empleo fue enviada."}
             return render(request,"Home/index.html",contexto)
     else:
         form = forms.TrabajadorForm()
