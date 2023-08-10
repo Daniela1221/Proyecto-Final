@@ -38,10 +38,6 @@ Ejecutar el archivo requirements.txt para tener todas las librerías necesarias 
 
 Tras llenar el formulario de registro de forma incorrecta (por ejemplo, escribir la confirmación de la contraseña mal), se envía igual el registro, lo cual se puede visualizar desde el panel de Administración de Django.
 
-Otro error es que si se actualiza la imagen de un producto de la tienda, esta no se actualiza, pero los otros campos ha actualizar si se actualizan. Este error solo ocurre si se actualiza directamente desde la página web del Login de admin, pero esto no ocurre desde el panel de Administración de Django.
-
-Al crear un producto y accionar el botón Guardar, te envía al panel de Administración de Django para agregar la imagen desde este menú. Si no se realiza esta acción, al volver a la tienda aparecerá un error de plantilla, donde no reconoce que el objeto tenga asignada una imagen. Este error no se solucionó al poner el condicional: `{% if object.imagen.url %} `. Este se encuentra implementado en la línea 31 de la plantilla `producto_list.html`.
-
 No se encuentra implementado el carrito de compras, ya que no se me ocurrió una forma de realizarlo con los conocimientos actuales.
 
 # Futuras mejoras
@@ -53,11 +49,3 @@ No se encuentra implementado el carrito de compras, ya que no se me ocurrió una
 - Las imágenes del Header se desean implementar de forma más sencilla y que cambien para cada subpágina.
 - Mejorar el estilo de la página sin ocupar archivos completos de .css para los apartados utilizados (se utilizaron 4 archivos .css en total) y entender qué es lo necesario para reducir y optimizar el código .css
 - Utilizar más frecuentemente un template que funcione como redireccionamiento a las páginas necesarias para mayor legibilidad del código.
-
-#
-
-
-
-
-
-
