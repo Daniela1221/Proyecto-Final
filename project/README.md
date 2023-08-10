@@ -2,7 +2,7 @@
 
 # Sobre el Autor
 
-Mi nombre es Daniela Soler y soy estudiante del curso de Python realizado a través de la plataforma de CoderHouse. Este proyecto es para poner en práctica los conocimientos de todo el curso y crear una página web mediante Django con el objetivo de implementarla para un proyecto de emprendimiento personal familiar.
+Mi nombre es Daniela Soler Collao y soy estudiante del curso de Python realizado a través de la plataforma de CoderHouse. Este proyecto es para poner en práctica los conocimientos de todo el curso y crear una página web mediante Django con el objetivo de implementarla para un proyecto de emprendimiento personal familiar.
 
 # Descripción del Proyecto
 
