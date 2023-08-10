@@ -10,7 +10,8 @@ class ProductoAdmin(admin.ModelAdmin):
         "categoria",
         "cantidad",
         "precio",
-        "fecha_actualizacion"
+        "fecha_actualizacion",
+        'imagen'
     )
     list_display_links = ("nombre",)
     search_fields = ("nombre","categoria")

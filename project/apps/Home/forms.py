@@ -32,3 +32,8 @@ class TrabajadorForm(forms.ModelForm):
         model = models.Trabajador
         fields = ["nombre","apellido","edad","correo",
                   "nombre_usuario","contraseña","contraseña2","descripcion"]
+        
+# class AvatarForm(forms.ModelForm):
+#     class Meta:
+#         model = models.Avatar
+#         fields = ["imagen"]

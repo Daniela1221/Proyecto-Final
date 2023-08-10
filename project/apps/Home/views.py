@@ -12,6 +12,15 @@ def home(request):
     return render(request, "Home/index.html")
 
 def perfil(request):
+    # if request.method == "POST":
+    #     form = forms.AvatarForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         contexto = {"actualizacion_avatar":"La imagen de perfil ha sido cambiada."}
+    #         return render(request,"Home/perfil.html",contexto)
+    # else:
+    #     form = forms.AvatarForm()
+    # return render(request,"Home/perfil.html",{"form":form})
     return render(request,"Home/perfil.html")
 
 def login_request(request):

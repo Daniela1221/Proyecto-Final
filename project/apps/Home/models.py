@@ -5,9 +5,11 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 
 class Avatar(models.Model):
+    # usuario = models.OneToOneField(User,on_delete=models.CASCADE)
     imagen = models.ImageField(upload_to="avatares", blank=True, null=True)
 
     def __str__(self) -> str:
+        # return self.usuario.username
         return f"Avatar"
     
     class Meta:

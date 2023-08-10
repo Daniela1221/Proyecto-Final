@@ -2,11 +2,10 @@
 {% load static %}
 
 {% block CONTENIDO_STYLE %}
-    {{ avatar }}
+    {{ actualizacion_avatar }}
 {% endblock CONTENIDO_STYLE %}
 
 {% block CONTENIDO_sSTYLE %}
-    <!-- <div><img src="" alt=""></div> -->
     <section>
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
@@ -16,6 +15,13 @@
                     {% else %}
                         <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'Home/img/predeterminado.png' %}" alt="avatar"></li> </div>
                     {% endif %}
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <center>
+                            <button type="submit" class="text-bg-success " class="btn-success">Guardar</button>
+                        </center>
+                    </form>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">

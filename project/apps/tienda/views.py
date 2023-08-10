@@ -37,7 +37,7 @@ class ProductoList(ListView):
 class ProductoCreate(CreateView):
     model = models.Producto
     form_class = forms.ProductoForm
-    success_url = reverse_lazy("admin:index")
+    success_url = reverse_lazy("tienda:producto_list")
 
 class ProductoDetail(DetailView):
     model = models.Producto
