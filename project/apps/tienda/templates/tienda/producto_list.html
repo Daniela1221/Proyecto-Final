@@ -28,9 +28,11 @@
                         <div class="col mb-5">
                             <div class="card h-100">
                                 <!-- Product image-->
-                                
-                                <img src="{{ object.imagen.url }}" alt="Imagen" />
-                                
+                                {% if object.imagen.url %}
+                                    <img src="{{ object.imagen.url }}" alt="Imagen" />
+                                {% else %}
+                                    <img src="{% static 'tienda/no-img.png' %}" alt="Imagen" />
+                                {% endif %}
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">

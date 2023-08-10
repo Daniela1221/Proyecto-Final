@@ -28,7 +28,7 @@ class Producto(models.Model):
         verbose_name_plural = "Nuevos Productos"
 
 class Contacto(models.Model):
-    correo = models.CharField(max_length=100, default="", verbose_name="Correo Suscriptor")
+    correo = models.CharField(max_length=100, verbose_name="Correo Suscriptor")
     consulta = models.TextField(max_length=1000)
     fecha_consulta = models.DateTimeField(default=timezone.now,editable=False,verbose_name="Fecha de consulta")
 

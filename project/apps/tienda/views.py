@@ -16,11 +16,11 @@ def contacto(request):
         form = forms.ContactoForm(request.POST)
         if form.is_valid():
             form.save()
-            contexto = {"contacto":"Consulta enviada con éxito al administrador. Te responderemos mediante correo lo antes posible."}
-            render(request, "Home/index.html", contexto)
+            contexto = {"contacto":"Mensaje enviado, te responderemos vía email a la brevedad."}
+            return render(request,"Home/index.html",contexto)
     else:
         form = forms.ContactoForm()
-    return render(request, "tienda/contacto.html", {"form": form})
+    return render(request,"tienda/contacto.html",{"form":form})
 
 #Productos
 class ProductoList(ListView):
@@ -37,7 +37,7 @@ class ProductoList(ListView):
 class ProductoCreate(CreateView):
     model = models.Producto
     form_class = forms.ProductoForm
-    success_url = reverse_lazy("tienda:producto_list")
+    success_url = reverse_lazy("admin:index")
 
 class ProductoDetail(DetailView):
     model = models.Producto
