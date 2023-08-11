@@ -21,7 +21,7 @@ El proyecto presenta 8 apps:
 - tienda: muestra los productos a vender, formulario de contacto y carrito de compras.
 
 A continuación se deja un link con acceso a un video explicativo del funcionamiento de la página web:
-`https://youtu.be/Bk72lSXWIyc`
+`https://youtu.be/BBLdm2BTKh8`
 
 # Especificaciones técnicas
 
