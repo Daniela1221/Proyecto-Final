@@ -10,18 +10,16 @@
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    {% if user.avatar.imagen.urls %}
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="{{ user.avatar.imagen.url }}" alt="avatar"></li> </div>
+                    {% if user.ImagenPerfil.avatar.url %}
+                        <div class="p-5"> <img src="{{ user.ImagenPerfil.avatar.url }}" alt="avatar"></div>
                     {% else %}
-                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'Home/img/predeterminado.png' %}" alt="avatar"></li> </div>
+                        <div class="p-5"> <img src="{% static 'Home/img/predeterminado.png' %}" alt="avatar"></div>
                     {% endif %}
-                    <form action="" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form.as_p }}
+                    {% if user.is_staff %}
                         <center>
-                            <button type="submit" class="text-bg-success " class="btn-success">Guardar</button>
+                            <div class="text-body"><a class="btn btn-outline-info mt-auto" href="{% url 'admin:index' %}">Cambiar Avatar</a></div>
                         </center>
-                    </form>
+                    {% endif %}
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -37,9 +35,14 @@
                         {% elif user.is_authenticated %}
                             Suscriptor <br>
                             <b>Acceso a</b>  <br>
-                            - Tienda para compra de productos <br>
-                            - Servicios para comprar alguna asesoría <br>
+                            - Tienda para compra de productos 
+                            <div class="text-body"><a class="btn btn-outline-primary mt-auto" href="{% url 'tienda:home' %}">Tienda</a></div>
+                            <br>
+                            - Servicios para comprar alguna asesoría 
+                            <div class="text-body"><a class="btn btn-outline-success mt-auto" href="{% url 'servicios:home' %}">Servicios</a></div>
+                            <br>
                             - Contacto para aclarar tus dudas con el Administrador
+                            <div class="text-body"><a class="btn btn-outline-info mt-auto" href="{% url 'tienda:contacto' %}">¡Contáctanos!</a></div>
                         {% endif %}
                     </div>
                 </div>

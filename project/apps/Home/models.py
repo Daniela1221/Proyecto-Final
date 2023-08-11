@@ -4,17 +4,16 @@ from django.core.exceptions import ValidationError
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 
-class Avatar(models.Model):
-    # usuario = models.OneToOneField(User,on_delete=models.CASCADE)
-    imagen = models.ImageField(upload_to="avatares", blank=True, null=True)
+class ImagenPerfil(models.Model):
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE, related_name="suscriptor")
+    avatar = models.ImageField(upload_to="avatares", blank=True, null=True)
 
-    def __str__(self) -> str:
-        # return self.usuario.username
-        return f"Avatar"
+    def __str__(self):
+        return self.usuario.username
     
     class Meta:
-        verbose_name = "Avatar"
-        verbose_name_plural = "Avatares"
+        verbose_name = "Imagen de Perfil"
+        verbose_name_plural = "Imágenes de Perfil"
 
 class Trabajador(models.Model):
     nombre = models.CharField(max_length=50, verbose_name="Nombre")

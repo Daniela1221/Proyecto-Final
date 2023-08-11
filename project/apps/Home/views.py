@@ -6,21 +6,15 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.urls import reverse
 from . import forms
+from . import models
+import os
 # Create your views here.
 
 def home(request):
     return render(request, "Home/index.html")
 
+@login_required
 def perfil(request):
-    # if request.method == "POST":
-    #     form = forms.AvatarForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         contexto = {"actualizacion_avatar":"La imagen de perfil ha sido cambiada."}
-    #         return render(request,"Home/perfil.html",contexto)
-    # else:
-    #     form = forms.AvatarForm()
-    # return render(request,"Home/perfil.html",{"form":form})
     return render(request,"Home/perfil.html")
 
 def login_request(request):

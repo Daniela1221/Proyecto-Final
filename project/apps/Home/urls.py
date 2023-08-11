@@ -11,7 +11,7 @@ urlpatterns = [
     path("logout/",LogoutView.as_view(template_name="Home/logout.html"),name="logout"),
     path("register/",views.register, name="register"),
     path("solicitud/",views.solicitud, name="solicitud"),
-    path("perfil/",views.perfil,name="perfil")
+    path("perfil/",views.perfil,name="perfil"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
